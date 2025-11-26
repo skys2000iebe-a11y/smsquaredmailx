@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SM² Mail — Soham & Swastik</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#0f172a 0%, #0b1220 100%);
+      --card: rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.06);
+      --accent1: #3b82f6; /* blue */
+      --accent2: #f59e0b; /* yellow */
+      --accent3: #10b981; /* green */
+      --accent4: #ec4899; /* pink */
+      --accent5: #8b5cf6; /* violet */
+      --muted: rgba(255,255,255,0.7);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; min-height:100vh; background:var(--bg); color:#fff; -webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent5));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(11,18,32,0.6)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent2),var(--accent4));padding:10px 16px;border-radius:10px;color:#071129;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:var(--card);padding:32px;border-radius:14px;box-shadow:0 10px 40px rgba(2,6,23,0.7)}
+    h1{margin:0;font-size:34px;line-height:1.05}
+    p.lead{color:var(--muted);margin-top:10px}
+    .features{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .pill{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* founders */
+    .founders{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .founder{background:var(--glass);padding:16px;border-radius:12px;display:flex;gap:12px;align-items:center}
+    .founder .avatar{flex:0 0 90px;height:90px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.05)}
+    .founder img{width:100%;height:100%;object-fit:cover;display:block}
+    .founder h3{margin:0;font-size:18px}
+    .founder small{color:var(--muted)}
+
+    /* features section */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:8px;font-weight:700}
+
+    /* contact */
+    footer{margin-top:34px;padding:18px;border-radius:12px;background:transparent;display:flex;justify-content:space-between;align-items:center}
+    .socials a{margin-left:12px;color:var(--muted);text-decoration:none}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.founders{grid-template-columns:1fr}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+    /* small animated accent */
+    .accent-ring{width:14px;height:14px;border-radius:50%;box-shadow:0 0 20px rgba(59,130,246,0.35);animation:pulse 2s infinite}
+    @keyframes pulse{0%{transform:scale(0.9);opacity:0.8}50%{transform:scale(1.25);opacity:0.45}100%{transform:scale(0.9);opacity:0.8}}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SM²</div>
+        <div>
+          <div style="font-weight:800">SM Squared Mail</div>
+          <div style="font-size:12px;color:var(--muted)">Modern mail tools for builders</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#product">Product</a>
+        <a href="#founders">Founders</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Get Early Access</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>SM² Mail — Smarter, faster, mail for developers and teams</h1>
+        <p class="lead">Secure transactional email, developer-first APIs, analytics and automation — designed by engineers who love elegant, simple tools.</p>
+        <div class="features">
+          <span class="pill">API-first</span>
+          <span class="pill">Low latency</span>
+          <span class="pill">Deliverability</span>
+          <span class="pill">Affordable</span>
+          <span class="pill">Privacy-friendly</span>
+        </div>
+
+        <div class="founders" id="founders">
+          <div class="founder">
+            <div class="avatar"><img src="data:image/jpeg;base64," + "<REPLACED_SO>" alt="Soham Misra"></div>
+            <div>
+              <h3>Soham Misra</h3>
+              <small>Co-founder • Backend & infra</small>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">Building rock-solid delivery pipelines and developer tooling.</div>
+            </div>
+          </div>
+
+          <div class="founder">
+            <div class="avatar"><img src="data:image/jpeg;base64," + "<REPLACED_SW>" alt="Swastik Mandol"></div>
+            <div>
+              <h3>Swastik Mandol</h3>
+              <small>Co-founder • Product & ML</small>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">Designing intuitive flows and clever automation powered by ML.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <a class="cta" href="#contact">Request Alpha</a>
+          <div style="color:var(--muted);font-weight:600">Or email: <span style="color:#fff">hello@sm2mail.dev</span></div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" style="width:100%;height:100%;min-height:260px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="font-weight:800">Why SM² Mail</div>
+              <div class="accent-ring"></div>
+            </div>
+            <p style="color:var(--muted);margin-top:10px">Deliver transactional emails with deep observability and simple pricing.</p>
+          </div>
+
+          <div style="margin-top:8px">
+            <div style="display:flex;gap:10px;margin-bottom:8px"><div class="badge" style="background:linear-gradient(90deg,var(--accent1),rgba(255,255,255,0.02));">Fast API</div><div class="badge" style="background:linear-gradient(90deg,var(--accent3),rgba(255,255,255,0.02));">Events</div></div>
+            <div class="grid">
+              <div class="card"><strong>Realtime Logs</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Inspect every send in an intuitive timeline.</div></div>
+              <div class="card"><strong>Templates</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Template engine with preview and localization.</div></div>
+              <div class="card"><strong>AI Assistant</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Smart suggestions for subject lines and content.</div></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="product" style="margin-top:26px">
+      <h2 style="margin:0">Product highlights</h2>
+      <p style="color:var(--muted);margin-top:6px">Everything teams need to reliably send and monitor emails.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card"><strong>SMTP + API</strong><div style="color:var(--muted);margin-top:8px">Support for legacy SMTP and modern REST/GraphQL APIs.</div></div>
+        <div class="card"><strong>Templates</strong><div style="color:var(--muted);margin-top:8px">Reusable templates with versioning and A/B tests.</div></div>
+        <div class="card"><strong>Webhooks</strong><div style="color:var(--muted);margin-top:8px">Real-time events so your app reacts to deliveries and bounces.</div></div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div>
+        <div style="font-weight:800">Let's build the future of mail</div>
+        <div style="color:var(--muted);margin-top:6px">Early access, partnerships, or careers — reach out.</div>
+      </div>
+      <div style="text-align:right">
+        <div style="margin-bottom:6px">hello@sm2mail.dev</div>
+        <div class="socials">
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // tiny interactivity: smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault(); const id=a.getAttribute('href').slice(1);
+        if(!id) return; const el=document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+    })
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SM² Mail — Soham & Swastik</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#0f172a 0%, #0b1220 100%);
+      --card: rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.06);
+      --accent1: #3b82f6; /* blue */
+      --accent2: #f59e0b; /* yellow */
+      --accent3: #10b981; /* green */
+      --accent4: #ec4899; /* pink */
+      --accent5: #8b5cf6; /* violet */
+      --muted: rgba(255,255,255,0.72);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; min-height:100vh; background:var(--bg); color:#fff; -webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent5));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(11,18,32,0.6)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent2),var(--accent4));padding:10px 16px;border-radius:10px;color:#071129;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:var(--card);padding:32px;border-radius:14px;box-shadow:0 10px 40px rgba(2,6,23,0.7)}
+    h1{margin:0;font-size:34px;line-height:1.05}
+    p.lead{color:var(--muted);margin-top:10px}
+    .features{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .pill{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* founders */
+    .founders{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .founder{background:var(--glass);padding:16px;border-radius:12px;display:flex;gap:12px;align-items:center}
+    .founder .avatar{flex:0 0 90px;height:90px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.05)}
+    .founder img{width:100%;height:100%;object-fit:cover;display:block}
+    .founder h3{margin:0;font-size:18px}
+    .founder small{color:var(--muted)}
+
+    /* features section */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:8px;font-weight:700}
+
+    /* contact */
+    footer{margin-top:34px;padding:18px;border-radius:12px;background:transparent;display:flex;justify-content:space-between;align-items:center}
+    .socials a{margin-left:12px;color:var(--muted);text-decoration:none}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.founders{grid-template-columns:1fr}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+    /* small animated accent */
+    .accent-ring{width:14px;height:14px;border-radius:50%;box-shadow:0 0 20px rgba(59,130,246,0.35);animation:pulse 2s infinite}
+    @keyframes pulse{0%{transform:scale(0.9);opacity:0.8}50%{transform:scale(1.25);opacity:0.45}100%{transform:scale(0.9);opacity:0.8}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SM²</div>
+        <div>
+          <div style="font-weight:800">SM Squared Mail</div>
+          <div style="font-size:12px;color:var(--muted)">Modern mail tools for builders</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#product">Product</a>
+        <a href="#founders">Founders</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Get Early Access</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>SM² Mail — Smarter, faster mail for developers and teams</h1>
+        <p class="lead">Secure transactional email, developer-first APIs, analytics and automation — designed by engineers who love elegant, simple tools.</p>
+        <div class="features">
+          <span class="pill">API-first</span>
+          <span class="pill">Low latency</span>
+          <span class="pill">Deliverability</span>
+          <span class="pill">Affordable</span>
+          <span class="pill">Privacy-friendly</span>
+        </div>
+
+        <div class="founders" id="founders">
+          <div class="founder">
+            <div class="avatar"><img src="soham.jpg" alt="Soham Misra"></div>
+            <div>
+              <h3>Soham Misra</h3>
+              <small>Co-founder • Backend & infra</small>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">Building rock-solid delivery pipelines and developer tooling.</div>
+            </div>
+          </div>
+
+          <div class="founder">
+            <div class="avatar"><img src="swastik.jpeg" alt="Swastik Mandol"></div>
+            <div>
+              <h3>Swastik Mandol</h3>
+              <small>Co-founder • Product & ML</small>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">Designing intuitive flows and clever automation powered by ML.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <a class="cta" href="#contact">Request Alpha</a>
+          <div style="color:var(--muted);font-weight:600">Or email: <span style="color:#fff">hello@sm2mail.dev</span></div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" style="width:100%;height:100%;min-height:260px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="font-weight:800">Why SM² Mail</div>
+              <div class="accent-ring"></div>
+            </div>
+            <p style="color:var(--muted);margin-top:10px">Deliver transactional emails with deep observability and simple pricing.</p>
+          </div>
+
+          <div style="margin-top:8px">
+            <div style="display:flex;gap:10px;margin-bottom:8px"><div class="badge" style="background:linear-gradient(90deg,var(--accent1),rgba(255,255,255,0.02));">Fast API</div><div class="badge" style="background:linear-gradient(90deg,var(--accent3),rgba(255,255,255,0.02));">Events</div></div>
+            <div class="grid">
+              <div class="card"><strong>Realtime Logs</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Inspect every send in an intuitive timeline.</div></div>
+              <div class="card"><strong>Templates</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Template engine with preview and localization.</div></div>
+              <div class="card"><strong>AI Assistant</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Smart suggestions for subject lines and content.</div></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="product" style="margin-top:26px">
+      <h2 style="margin:0">Product highlights</h2>
+      <p style="color:var(--muted);margin-top:6px">Everything teams need to reliably send and monitor emails.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card"><strong>SMTP + API</strong><div style="color:var(--muted);margin-top:8px">Support for legacy SMTP and modern REST/GraphQL APIs.</div></div>
+        <div class="card"><strong>Templates</strong><div style="color:var(--muted);margin-top:8px">Reusable templates with versioning and A/B tests.</div></div>
+        <div class="card"><strong>Webhooks</strong><div style="color:var(--muted);margin-top:8px">Real-time events so your app reacts to deliveries and bounces.</div></div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div>
+        <div style="font-weight:800">Let's build the future of mail</div>
+        <div style="color:var(--muted);margin-top:6px">Early access, partnerships, or careers — reach out.</div>
+      </div>
+      <div style="text-align:right">
+        <div style="margin-bottom:6px">hello@sm2mail.dev</div>
+        <div class="socials">
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // tiny interactivity: smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault(); const id=a.getAttribute('href').slice(1);
+        if(!id) return; const el=document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+    })
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SM² Mail — Soham & Swastik</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#0f172a 0%, #0b1220 100%);
+      --card: rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.06);
+      --accent1: #3b82f6; /* blue */
+      --accent2: #f59e0b; /* yellow */
+      --accent3: #10b981; /* green */
+      --accent4: #ec4899; /* pink */
+      --accent5: #8b5cf6; /* violet */
+      --muted: rgba(255,255,255,0.72);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; min-height:100vh; background:var(--bg); color:#fff; -webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent5));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(11,18,32,0.6)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent2),var(--accent4));padding:10px 16px;border-radius:10px;color:#071129;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:var(--card);padding:32px;border-radius:14px;box-shadow:0 10px 40px rgba(2,6,23,0.7)}
+    h1{margin:0;font-size:34px;line-height:1.05}
+    p.lead{color:var(--muted);margin-top:10px}
+    .features{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .pill{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* founders */
+    .founders{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .founder{background:var(--glass);padding:16px;border-radius:12px;display:flex;gap:12px;align-items:center}
+    .founder .avatar{flex:0 0 90px;height:90px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.05)}
+    .founder img{width:100%;height:100%;object-fit:cover;display:block}
+    .founder h3{margin:0;font-size:18px}
+    .founder small{color:var(--muted)}
+
+    /* features section */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:8px;font-weight:700}
+
+    /* contact */
+    footer{margin-top:34px;padding:18px;border-radius:12px;background:transparent;display:flex;justify-content:space-between;align-items:center}
+    .socials a{margin-left:12px;color:var(--muted);text-decoration:none}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.founders{grid-template-columns:1fr}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+    /* small animated accent */
+    .accent-ring{width:14px;height:14px;border-radius:50%;box-shadow:0 0 20px rgba(59,130,246,0.35);animation:pulse 2s infinite}
+    @keyframes pulse{0%{transform:scale(0.9);opacity:0.8}50%{transform:scale(1.25);opacity:0.45}100%{transform:scale(0.9);opacity:0.8}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SM²</div>
+        <div>
+          <div style="font-weight:800">SM Squared Mail</div>
+          <div style="font-size:12px;color:var(--muted)">Modern mail tools for builders</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#product">Product</a>
+        <a href="#founders">Founders</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Get Early Access</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>SM² Mail — Smarter, faster mail for developers and teams</h1>
+        <p class="lead">Secure transactional email, developer-first APIs, analytics and automation — designed by engineers who love elegant, simple tools.</p>
+        <div class="features">
+          <span class="pill">API-first</span>
+          <span class="pill">Low latency</span>
+          <span class="pill">Deliverability</span>
+          <span class="pill">Affordable</span>
+          <span class="pill">Privacy-friendly</span>
+        </div>
+
+        <div class="founders" id="founders">
+          <div class="founder">
+            <div class="avatar"><img src="soham.jpg" alt="Soham Misra"></div>
+            <div>
+              <h3>Soham Misra</h3>
+              <small>Co-founder • Backend & infra</small>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">Building rock-solid delivery pipelines and developer tooling.</div>
+            </div>
+          </div>
+
+          <div class="founder">
+            <div class="avatar"><img src="swastik.jpeg" alt="Swastik Mandol"></div>
+            <div>
+              <h3>Swastik Mandol</h3>
+              <small>Co-founder • Product & ML</small>
+              <div style="margin-top:8px;color:var(--muted);font-size:13px">Designing intuitive flows and clever automation powered by ML.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <a class="cta" href="#contact">Request Alpha</a>
+          <div style="color:var(--muted);font-weight:600">Or email: <span style="color:#fff">hello@sm2mail.dev</span></div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" style="width:100%;height:100%;min-height:260px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="font-weight:800">Why SM² Mail</div>
+              <div class="accent-ring"></div>
+            </div>
+            <p style="color:var(--muted);margin-top:10px">Deliver transactional emails with deep observability and simple pricing.</p>
+          </div>
+
+          <div style="margin-top:8px">
+            <div style="display:flex;gap:10px;margin-bottom:8px"><div class="badge" style="background:linear-gradient(90deg,var(--accent1),rgba(255,255,255,0.02));">Fast API</div><div class="badge" style="background:linear-gradient(90deg,var(--accent3),rgba(255,255,255,0.02));">Events</div></div>
+            <div class="grid">
+              <div class="card"><strong>Realtime Logs</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Inspect every send in an intuitive timeline.</div></div>
+              <div class="card"><strong>Templates</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Template engine with preview and localization.</div></div>
+              <div class="card"><strong>AI Assistant</strong><div style="color:var(--muted);margin-top:8px;font-size:14px">Smart suggestions for subject lines and content.</div></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="product" style="margin-top:26px">
+      <h2 style="margin:0">Product highlights</h2>
+      <p style="color:var(--muted);margin-top:6px">Everything teams need to reliably send and monitor emails.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card"><strong>SMTP + API</strong><div style="color:var(--muted);margin-top:8px">Support for legacy SMTP and modern REST/GraphQL APIs.</div></div>
+        <div class="card"><strong>Templates</strong><div style="color:var(--muted);margin-top:8px">Reusable templates with versioning and A/B tests.</div></div>
+        <div class="card"><strong>Webhooks</strong><div style="color:var(--muted);margin-top:8px">Real-time events so your app reacts to deliveries and bounces.</div></div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div>
+        <div style="font-weight:800">Let's build the future of mail</div>
+        <div style="color:var(--muted);margin-top:6px">Early access, partnerships, or careers — reach out.</div>
+      </div>
+      <div style="text-align:right">
+        <div style="margin-bottom:6px">hello@sm2mail.dev</div>
+        <div class="socials">
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // tiny interactivity: smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault(); const id=a.getAttribute('href').slice(1);
+        if(!id) return; const el=document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+    })
+  </script>
+</body>
+</html>
